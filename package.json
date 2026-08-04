@@ -1,12 +1,11 @@
 {
-  "name": "equiai-nexus",
+  "name": "msendoo-ai-school-management",
   "private": true,
-  "homepage": "https://aauprightguy59-debug.github.io/codespaces-blank/",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && mkdir -p dist/school dist/gbv && cp dist/school.html dist/school/index.html && cp dist/gbv.html dist/gbv/index.html",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"
   },
