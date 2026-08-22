@@ -3,5 +3,9 @@
     "dev": "vite",
     "build": "vite build && mkdir -p dist/school dist/gbv && cp dist/index.html dist/school/index.html && cp dist/index.html dist/gbv/index.html",
     "preview": "vite preview"
+
+},
+  "devDependencies": {
+    "vite": "latest"
   }
 }
