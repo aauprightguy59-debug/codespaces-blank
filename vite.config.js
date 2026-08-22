@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: '0.0.0.0',
-    allowedHosts: ['equiai-nexus.loca.lt', 'soft-bobcat-47.loca.lt'c, 'localhost'],
+    allowedHosts: ['equiai-nexus.loca.lt', 'soft-bobcat-47.loca.lt', 'localhost'],
   }
 });
