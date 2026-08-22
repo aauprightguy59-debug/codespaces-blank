@@ -1,7 +1,7 @@
 {
   "scripts": {
     "dev": "vite",
-    "build": "vite build && mkdir -p dist/school dist/gbv && cp dist/index.html dist/school/index.html && cp dist/index.html dist/gbv/index.html",
+   "build": "vite build --base=/codespaces-blank/ && mkdir -p dist/school dist/gbv && cp dist/index.html dist/school/index.html && cp dist/index.html dist/gbv/index.html",
     "preview": "vite preview"
 
 },
