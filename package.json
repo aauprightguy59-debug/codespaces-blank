@@ -3,7 +3,10 @@
     "dev": "vite",
    "build": "vite build --base=/codespaces-blank/ && mkdir -p dist/school dist/gbv && cp dist/index.html dist/school/index.html && cp dist/index.html dist/gbv/index.html",
     "preview": "vite preview"
-
+    },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
 },
   "devDependencies": {
     "vite": "latest"
