@@ -1,5 +1,12 @@
-import { useState, useEffect } from "react";
-
+import { BroswerRouter, Routes, Route } from 'react-router-dom';
+function App() {
+  return (
+    <BroswerRouter basename="/codespaces-blank">
+      <Routes>
+        {/* Msendoo School*/}
+      </Routes>
+    </BroswerRouter>
+    );
 const CREDENTIALS = {
   admin: { password: "admin123", role: "Administrator" },
   registrar: { password: "reg123", role: "Academic Officer" },
