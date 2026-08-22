@@ -1,12 +1,18 @@
-import { BroswerRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import SchoolEntry from './schoolEntry';
+import GbvEntry from './gbvEntry';
+
 function App() {
   return (
-    <BroswerRouter basename="/codespaces-blank">
+    <BrowserRouter basename="/codespaces-blank">
       <Routes>
-        {/* Msendoo School*/}
+        <Route path="/school" element={<SchoolEntry />} />
+        <Route path="/gbv" element={<GbvEntry />} />
+        <Route path="/" element={<SchoolEntry />} /> {/* Default Landing page */}
       </Routes>
-    </BroswerRouter>
+    </BrowserRouter>
     );
+}
 const CREDENTIALS = {
   admin: { password: "admin123", role: "Administrator" },
   registrar: { password: "reg123", role: "Academic Officer" },
