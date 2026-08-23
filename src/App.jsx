@@ -1,18 +1,7 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 import SchoolEntry from './schoolEntry';
 import GbvEntry from './gbvEntry';
 
-function App() {
-  return (
-    <BrowserRouter basename="/codespaces-blank">
-      <Routes>
-        <Route path="/school" element={<SchoolEntry />} />
-        <Route path="/gbv" element={<GbvEntry />} />
-        <Route path="/" element={<SchoolEntry />} /> {/* Default Landing page */}
-      </Routes>
-    </BrowserRouter>
-    );
-}
 const CREDENTIALS = {
   admin: { password: "admin123", role: "Administrator" },
   registrar: { password: "reg123", role: "Academic Officer" },
@@ -224,7 +213,7 @@ function cardStyle(color) {
   };
 }
 
-function App() {
+export default function App() {
   const [user, setUser] = useState(loadUser());
   const [data, setData] = useState(loadData());
   const [tab, setTab] = useState("Dashboard");
@@ -320,7 +309,7 @@ function App() {
             Sign in to test portal
           </button>
           <div style={{ marginTop: 18, padding: "12px 14px", borderRadius: 12, background: "#eef2ff", color: "#334155", fontSize: 13, lineHeight: 1.6 }}>
-            Demo credentials: <strong>administrator/admin123</strong>, <strong>registrar/reg123</strong>, <strong>teacher/teach123</strong>, <strong>principal/prin123</strong>.
+            Demo credentials: <strong>admin/admin123</strong>, <strong>registrar/reg123</strong>, <strong>teacher/teach123</strong>, <strong>principal/prin123</strong>.
           </div>
         </div>
       </div>
@@ -763,13 +752,6 @@ function App() {
       setMessage(`Assessment saved for ${formatName(data.students.find((student) => student.id === form.studentId))}.`);
     };
 
-    const updateScore = (id, field, value) => {
-      setData((prev) => ({
-        ...prev,
-        assessments: prev.assessments.map((entry) => (entry.id === id ? { ...entry, [field]: value } : entry)),
-      }));
-    };
-
     return (
       <div>
         {createHeading("Assessment Module", "Enter continuous assessment, assignments, and midterm scores for teachers to capture progress.")}
@@ -1133,7 +1115,7 @@ function App() {
             </div>
             <div style={{ background: "#fff", borderRadius: 18, padding: 24, boxShadow: "0 2px 20px rgba(15, 23, 42, 0.06)" }}>
               <h3 style={{ marginTop: 0, color: "#0f172a" }}>Instructions</h3>
-              <p style={{ color: "#475569", lineHeight: 1.7 }}>Use this sheet for term result review. If student averages are missing, check the assessment and exam entries for the selected class and term. The system combines continuous assessment and examination data for each subject automatically.</p>
+              <p style={{ color: "#475569", lineHeight: 1.7 }}>Use this sheet for term result review. If student averages are missing, check the assessment and exam entries for the selected class and term.</p>
             </div>
           </div>
         )}
@@ -1575,5 +1557,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
