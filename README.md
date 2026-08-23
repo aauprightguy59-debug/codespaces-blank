@@ -5,7 +5,7 @@ This repository now presents the school system as the default landing experience
 ## Quick Open Links
 
 <p align="center">
-  <a href="https://aauprightguy59-debug.github.io/codespaces-blank/school/">
+  <a href="https://aauprightguy59-debug.github.io/codespaces-blank/#/school/>
     <img src="https://img.shields.io/badge/Open%20School%20Demo-4338ca?style=for-the-badge&logo=rocket&logoColor=white" alt="Open School Demo" />
   </a>
   <a href="https://aauprightguy59-debug.github.io/codespaces-blank/gbv/">
